@@ -1,0 +1,73 @@
+.product-selection-component {
+  padding-top: 35px;
+
+  @include media-breakpoint-down(xl) {
+    .row {
+      row-gap: 20px;
+    }
+  }
+}
+
+.product-selection-item {
+  display: block;
+  padding: 16px;
+  border-radius: 8px;
+  max-width: 210px;
+  transition: background-color 0.3s ease-in-out;
+  color: $body-color;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #fff;
+  }
+
+  @include media-breakpoint-down(md) {
+    background-color: #fff;
+    max-width: none;
+    width: 100%;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 8px;
+  }
+
+  figure {
+    margin-bottom: 12px;
+
+    @include media-breakpoint-down(md) {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0;
+    }
+  }
+
+  figcaption {
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 15px;
+
+    @include media-breakpoint-down(md) {
+      margin-top: 0;
+    }
+  }
+
+  &-visit {
+    width: 24px;
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+
+  &-image {
+    border-radius: 4px;
+
+    @include media-breakpoint-down(md) {
+      margin-right: 20px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      height: 100px;
+    }
+  }
+}

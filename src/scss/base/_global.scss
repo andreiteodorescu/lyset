@@ -1,0 +1,28 @@
+body {
+  background: linear-gradient(63.51deg, #d9d9d9 36.64%, #ffffff 102.88%);
+  background-repeat: no-repeat;
+  //height: 100dvh;
+  color: $body-color;
+}
+
+.col-5ths {
+  flex: 0 0 20%;
+  max-width: 20%;
+  display: flex;
+  justify-content: center;
+
+  @include media-breakpoint-down(xl) {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+
+  @include media-breakpoint-down(lg) {
+    flex: 0 0 33%;
+    max-width: 33%;
+  }
+
+  @include media-breakpoint-down(md) {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}

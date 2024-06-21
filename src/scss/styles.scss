@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap");
+
+// Custom variables and Bootstrap variable overwrites
+@import "abstracts/variables";
+
+// Import all of Bootstrap's CSS
+@import "bootstrap/scss/bootstrap";
+
+// Custom code here
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "base/animations";
+@import "base/global";
+@import "base/typography";
+@import "base/buttons";
+@import "base/forms";
+@import "base/helpers";
+@import "components/header";
+@import "components/product-selection";
+@import "components/steps";
+@import "components/filter";
+@import "components/footer";
