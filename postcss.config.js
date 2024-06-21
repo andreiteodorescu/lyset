@@ -21,9 +21,9 @@ module.exports = {
           }),
         ]
       : []),
-    purgecss({
-      content: ["./src/**/*.html"],
-      defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
-    }),
+    // purgecss({
+    //   content: ["./src/**/*.html"],
+    //   defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
+    // }),
   ],
 };

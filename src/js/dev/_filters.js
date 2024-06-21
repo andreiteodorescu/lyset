@@ -1,9 +1,20 @@
 $(document).ready(function () {
-  $('.choice-selection-pill-button input[type="radio"]').change(function () {
-    // Add the class to the parent label of the checked radio button
+  $('.js-choice-selection-button input[type="radio"]').change(function () {
     if ($(this).is(":checked")) {
       $(this).parent().addClass("active");
       $(this).parent().siblings().removeClass("active");
+    }
+  });
+
+  $('.js-choice-selection-button-grid input[type="radio"]').change(function () {
+    if ($(this).is(":checked")) {
+      $(this).parent().addClass("active");
+      $(this)
+        .parent()
+        .parent()
+        .siblings()
+        .find(".js-choice-selection-button-grid")
+        .removeClass("active");
     }
   });
 });

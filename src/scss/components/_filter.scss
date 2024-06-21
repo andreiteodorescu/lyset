@@ -39,12 +39,17 @@
 
   &-content {
     padding: 30px;
-    flex: 1 1 50%;
+    flex: 1 0 50%;
 
     &-grey {
       background-color: $accordion-slide-color;
       border-top-right-radius: $accordion-radius;
       border-bottom-right-radius: $accordion-radius;
+    }
+
+    &-image {
+      padding: 0;
+      overflow: hidden;
     }
 
     &-title {
@@ -68,11 +73,6 @@
   margin-bottom: 35px;
 }
 
-.choice-selection-pill-btns {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .choice-selection-pill-button {
   display: flex;
   flex: 1 1 50%;
@@ -80,6 +80,7 @@
   max-width: 230px;
   padding: 8px;
   border-radius: 48px;
+  margin: 0;
 
   .form-check-input {
     width: 72px;
@@ -112,9 +113,75 @@
   }
 }
 
+.choice-selection-grid-item {
+  width: 335px;
+}
+
+.choice-selection-grid-button {
+  display: flex;
+  flex: 1 1 100%;
+  align-items: center;
+  padding: 8px 24px 8px 8px;
+  border-radius: 16px;
+  flex-direction: row-reverse;
+  margin: 0;
+  justify-content: space-between;
+
+  .form-check-input {
+    width: 32px;
+    height: 32px;
+    margin: 0;
+    cursor: pointer;
+    visibility: hidden;
+
+    &:checked[type="radio"] {
+      background-image: url("~@images/step-check.png");
+      border: none;
+      visibility: visible;
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  .form-check-label {
+    color: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+
+    img {
+      border-radius: 8px;
+      border: 1px solid #d9d9d9;
+      margin-right: 20px;
+    }
+  }
+
+  &.active {
+    background-color: rgba(218, 218, 218, 0.5);
+
+    .form-check-label {
+      font-weight: 700;
+      color: inherit;
+
+      img {
+        border-color: transparent;
+      }
+
+      .info {
+        display: none;
+      }
+    }
+  }
+}
+
 .footnote {
   font-weight: 500;
   font-size: 12px;
   color: rgba(0, 0, 0, 0.5);
   max-width: 300px;
+}
+
+.choice-selection-dimensions {
+  .form-control {
+  }
 }
