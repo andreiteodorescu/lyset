@@ -334,7 +334,7 @@
                 aria-expanded="true"
                 aria-controls="collapseThree"
               >
-                Color
+                Dimensions
               </button>
               <div
                 id="collapseThree"
@@ -349,12 +349,24 @@
                     </p>
                     <div class="choice-selection choice-selection-dimensions">
                       <div class="form-floating">
+                        <!-- Adauga clasa asta "default-float" langa "form-floating" daca nu vrei ca inputul sa aiba efectul ala de label jumping -->
                         <input
                           type="text"
+                          id="sizeA"
                           class="form-control"
                           placeholder="Size A"
                         />
-                        <label for="floatingInput">Size A</label>
+                        <label for="sizeA">Size A</label>
+                      </div>
+
+                      <div class="form-floating">
+                        <input
+                          type="text"
+                          id="sizeB"
+                          class="form-control"
+                          placeholder="Size B"
+                        />
+                        <label for="sizeB">Size B</label>
                       </div>
                     </div>
                     <div class="footnote">
@@ -363,13 +375,471 @@
                     </div>
                   </div>
                   <div
-                    class="filter-accordion-content filter-accordion-content-image filter-accordion-content-grey"
+                    class="filter-accordion-content filter-accordion-content-image filter-accordion-content-grey text-center"
                   >
                     <img
                       class="img-fluid"
-                      src="assets/images/color-image-dummy.png"
+                      src="assets/images/dimensions_dummy_photo.png"
                       alt=""
                     />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseFour"
+                aria-expanded="true"
+                aria-controls="collapseFour"
+              >
+                Light temperature
+              </button>
+              <div
+                id="collapseFour"
+                class="accordion-collapse collapse show"
+                data-bs-parent="#filterAccordion"
+              >
+                <div class="accordion-body">
+                  <div class="filter-accordion-content">
+                    <h4 class="filter-accordion-content-title">
+                      Light temperature
+                    </h4>
+                    <p class="filter-accordion-content-subtitle">
+                      Select your desired temperature
+                    </p>
+                    <div
+                      class="choice-selection gap-sm flex-wrap flex-lg-nowrap"
+                    >
+                      <div
+                        class="form-check choice-selection-tile-button"
+                        data-temperature="3000"
+                      >
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="temperatureRadio"
+                          id="temperatureRadio1"
+                          checked
+                        />
+                        <label class="form-check-label" for="temperatureRadio1">
+                          3000K
+                        </label>
+                      </div>
+
+                      <div
+                        class="form-check choice-selection-tile-button"
+                        data-temperature="4000"
+                      >
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="temperatureRadio"
+                          id="temperatureRadio2"
+                        />
+                        <label class="form-check-label" for="temperatureRadio2">
+                          4000K
+                        </label>
+                      </div>
+                    </div>
+                    <div class="footnote">
+                      Dimensions are based on the selected shape on previous
+                      step.
+                      <a href="#" target="_blank">Read Guidelines</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseFive"
+                aria-expanded="true"
+                aria-controls="collapseFive"
+              >
+                Light Driver Typer
+              </button>
+              <div
+                id="collapseFive"
+                class="accordion-collapse collapse show"
+                data-bs-parent="#filterAccordion"
+              >
+                <div class="accordion-body">
+                  <div class="filter-accordion-content">
+                    <h4 class="filter-accordion-content-title">
+                      Light Driver Typer
+                    </h4>
+                    <p class="filter-accordion-content-subtitle">
+                      Select your driver
+                    </p>
+                    <div
+                      class="choice-selection gap-sm flex-wrap flex-lg-nowrap"
+                    >
+                      <div class="form-check choice-selection-tile-button-bw">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="driverRadio"
+                          id="driverRadio1"
+                          checked
+                        />
+                        <label class="form-check-label" for="driverRadio1">
+                          <span>On-Off</span>
+                        </label>
+                      </div>
+
+                      <div class="form-check choice-selection-tile-button-bw">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="driverRadio"
+                          id="driverRadio2"
+                        />
+                        <label class="form-check-label" for="driverRadio2">
+                          <span>ZIGBEE</span>
+                        </label>
+                      </div>
+
+                      <div class="form-check choice-selection-tile-button-bw">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="driverRadio"
+                          id="driverRadio3"
+                        />
+                        <label class="form-check-label" for="driverRadio3">
+                          <span>DALI</span>
+                        </label>
+                      </div>
+
+                      <div class="form-check choice-selection-tile-button-bw">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="driverRadio"
+                          id="driverRadio4"
+                        />
+                        <label class="form-check-label" for="driverRadio4">
+                          <span>0-10V</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="footnote">
+                      Dimensions are based on the selected shape on previous
+                      step.
+                      <a href="#" target="_blank">Read Guidelines</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseThree"
+                aria-expanded="true"
+                aria-controls="collapseThree"
+              >
+                Extras
+              </button>
+              <div
+                id="collapseThree"
+                class="accordion-collapse collapse show"
+                data-bs-parent="#filterAccordion"
+              >
+                <div class="accordion-body">
+                  <div class="filter-accordion-content">
+                    <h4 class="filter-accordion-content-title">Extras</h4>
+                    <p class="filter-accordion-content-subtitle">
+                      Visualize the necessary connectors and select your drivers
+                    </p>
+                    <div
+                      class="choice-selection gap-sm flex-wrap flex-lg-nowrap"
+                    >
+                      <div class="form-check choice-selection-tile-button-bw">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="extrasRadio"
+                          id="extrasRadio1"
+                          checked
+                        />
+                        <label class="form-check-label" for="extrasRadio1">
+                          <span>In-Track driver</span>
+                        </label>
+                      </div>
+
+                      <div class="form-check choice-selection-tile-button-bw">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="extrasRadio"
+                          id="extrasRadio2"
+                        />
+                        <label class="form-check-label" for="extrasRadio2">
+                          <span>External driver <sup>1</sup></span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="footnote">
+                      <sup>1</sup> For external drivers, be aware that you need
+                      to have a place to hide it.
+                    </div>
+                  </div>
+                  <div
+                    class="filter-accordion-content filter-accordion-content-grey"
+                  >
+                    <ul class="list-unstyled extras-list">
+                      <li class="extras-list-item">
+                        <img
+                          src="assets/images/extras-dummy-photo.png"
+                          alt=""
+                        />
+                        <p>L Connector Surface</p>
+                      </li>
+                      <li class="extras-list-item">
+                        <img
+                          src="assets/images/extras-dummy-photo.png"
+                          alt=""
+                        />
+                        <p>L Connector Surface</p>
+                      </li>
+                    </ul>
+                    <div class="footnote">
+                      Connectors are required and necessary for your selected
+                      shape. <a href="#" target="_blank">Read Guidelines</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseSeven"
+                aria-expanded="true"
+                aria-controls="collapseSeven"
+              >
+                Lights
+              </button>
+              <div
+                id="collapseSeven"
+                class="accordion-collapse collapse show"
+                data-bs-parent="#filterAccordion"
+              >
+                <div class="accordion-body">
+                  <div class="filter-accordion-content">
+                    <h4 class="filter-accordion-content-title">Lights</h4>
+                    <p class="filter-accordion-content-subtitle">
+                      Please select your desired lights below
+                    </p>
+                    <div
+                      class="choice-selection flex-wrap choice-selection-lights"
+                      id="lights-list"
+                    >
+                      <div class="lights-item">
+                        <figure>
+                          <div class="lights-item-image">
+                            <img
+                              src="assets/images/lights-photo-dummy.png"
+                              alt=""
+                            />
+                          </div>
+                          <figcaption>
+                            GU10 Lamp Bulb <span>5W • White</span>
+                          </figcaption>
+                        </figure>
+
+                        <div class="quantity-wrapper">
+                          <button
+                            class="quantity-button quantity-up"
+                            type="button"
+                          ></button>
+                          <input
+                            class="lights-item-quantity"
+                            type="number"
+                            min="0"
+                            value="0"
+                          />
+                          <button
+                            class="quantity-button quantity-down"
+                            type="button"
+                          ></button>
+                        </div>
+                      </div>
+                      <div class="lights-item">
+                        <figure>
+                          <div class="lights-item-image">
+                            <img
+                              src="assets/images/lights-photo-dummy.png"
+                              alt=""
+                            />
+                          </div>
+                          <figcaption>
+                            GU10 Lamp Bulb <span>5W • White</span>
+                          </figcaption>
+                        </figure>
+
+                        <div class="quantity-wrapper">
+                          <button
+                            class="quantity-button quantity-up"
+                            type="button"
+                          ></button>
+                          <input
+                            class="lights-item-quantity"
+                            type="number"
+                            min="0"
+                            value="0"
+                          />
+                          <button
+                            class="quantity-button quantity-down"
+                            type="button"
+                          ></button>
+                        </div>
+                      </div>
+                      <div class="lights-item">
+                        <figure>
+                          <div class="lights-item-image">
+                            <img
+                              src="assets/images/lights-photo-dummy.png"
+                              alt=""
+                            />
+                          </div>
+                          <figcaption>
+                            GU10 Lamp Bulb <span>5W • White</span>
+                          </figcaption>
+                        </figure>
+
+                        <div class="quantity-wrapper">
+                          <button
+                            class="quantity-button quantity-up"
+                            type="button"
+                          ></button>
+                          <input
+                            class="lights-item-quantity"
+                            type="number"
+                            min="0"
+                            value="0"
+                          />
+                          <button
+                            class="quantity-button quantity-down"
+                            type="button"
+                          ></button>
+                        </div>
+                      </div>
+                      <div class="lights-item">
+                        <figure>
+                          <div class="lights-item-image">
+                            <img
+                              src="assets/images/lights-photo-dummy.png"
+                              alt=""
+                            />
+                          </div>
+                          <figcaption>
+                            GU10 Lamp Bulb <span>5W • White</span>
+                          </figcaption>
+                        </figure>
+
+                        <div class="quantity-wrapper">
+                          <button
+                            class="quantity-button quantity-up"
+                            type="button"
+                          ></button>
+                          <input
+                            class="lights-item-quantity"
+                            type="number"
+                            min="0"
+                            value="0"
+                          />
+                          <button
+                            class="quantity-button quantity-down"
+                            type="button"
+                          ></button>
+                        </div>
+                      </div>
+                      <div class="lights-item">
+                        <figure>
+                          <div class="lights-item-image">
+                            <img
+                              src="assets/images/lights-photo-dummy.png"
+                              alt=""
+                            />
+                          </div>
+                          <figcaption>
+                            GU10 Lamp Bulb <span>5W • White</span>
+                          </figcaption>
+                        </figure>
+
+                        <div class="quantity-wrapper">
+                          <button
+                            class="quantity-button quantity-up"
+                            type="button"
+                          ></button>
+                          <input
+                            class="lights-item-quantity"
+                            type="number"
+                            min="0"
+                            value="0"
+                          />
+                          <button
+                            class="quantity-button quantity-down"
+                            type="button"
+                          ></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="footnote">
+                      We've selected all compatible light projectors for your
+                      track product.
+                      <a href="#" target="_blank">Discover more</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item accordion-item-last">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseEight"
+                aria-expanded="true"
+                aria-controls="collapseEight"
+              >
+                Lights
+              </button>
+              <div
+                id="collapseEight"
+                class="accordion-collapse collapse show"
+                data-bs-parent="#filterAccordion"
+              >
+                <div class="accordion-body">
+                  <div class="filter-accordion-content checkout-step">
+                    <p class="checkout-step-text">
+                      You’re almost ready with your configurations.
+                    </p>
+                    <a
+                      href="#"
+                      title="Back to Lyset"
+                      class="btn btn-dark btn-square btn-hero"
+                    >
+                      Proceed to final step
+                      <img src="assets/images/cheveron-right.svg" alt=""
+                    /></a>
                   </div>
                 </div>
               </div>
